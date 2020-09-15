@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #logo {
+      flex: 0 1 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    #header-img {
+      width: 60px;
+      height: auto;
+      filter: invert(100%);
+    }
+
+    h1 {
+      font-family: 'Righteous', cursive;
+      color: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    .works-img {
+      width: 30px;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-style: italic;
+    }
+
+    input[type=email] {
+      font-family: inherit;
+    }
+
+    input[type=submit] {
+      background-color: rgb(255, 88, 15);
+      border: none;
+      color: white;
+      font-family: inherit;
+      padding: 2px 5px 2px 5px;
+      cursor: pointer;
+    }
+
+    .level {
+      border-top: 1px solid;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      border-color: rgb(255, 164, 114);
+      width: 200px;
+      text-align: center;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: rgb(255, 164, 114);
+    }
+
+    .plan-info {
+      width: 200px;
+      height: 270px;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      border-bottom: 1px solid;
+      border-color: rgb(255, 164, 114);
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: 25px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      align-items: stretch;
+    }
+
+    h3 {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    ol {
+      list-style: none;
+      padding-bottom: 10px;
+    }
+
+    .button {
+      margin-bottom: 10px;
+      background-color: rgb(255, 201, 157);
+      border: none;
+      font-family: inherit;
+      padding: 5px 0 5px 0;
+      color: white;
+    }
+
+    #three-list {
+      padding-bottom: 34px;
+    }
+
+    #six-list {
+      padding-bottom: 59px;
+    }
+
+    footer {
+      background-color: rgb(255, 156, 89);
+      width: 100%;
+      height: 7.5vh;
+      color: white;
+    }
+
+    #footer-links {
+      width: 100%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 5px;
+    }
+
+    .footer-link {
+      cursor: pointer;
+      padding: 0 5px 0 5px;
+    }
+
+
+    @media screen and (max-width: 480px) {
+      header {
+        background-color: rgb(255, 126, 38);
+        position: fixed;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1%;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        list-style-type: none;
+      }
+
+      #form-div {
+        padding-top: 175px;
+        margin: auto;
+      }
+
+      #form {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #email {
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+
+      #how-it-works {
+        margin: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90vh;
+        padding-top: 150px;
+      }
+
+      #how-it-works p {
+        text-align: center;
+        padding-bottom: 25px;
+      }
+
+      .break {
+        display: static;
+      }
+      
+      #cookie-cam {
+        padding-top: 150px;
+      }
+
+      #video {
+        width: 320px;
+        height: 180px;
+      }
+
+      #order-now {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 150px;
+      }
+    }
+
+    
+
+    
+    @media screen and (min-width: 480px) {
+      header {
+        background-color: rgb(255, 126, 38);
+        position: fixed;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2%;
+        width: 100%;
+        height: 15%;
+      }
+
+      ul {
+        margin: auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        width: 20em;
+      }
+
+      #form-div {
+        padding-top: 100px;
+      }
+
+      #form {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      #email {
+        margin-top: 1%;
+        margin-bottom: 1%;
+      }
+
+      #how-it-works {
+        padding-top: 100px;
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 50px 1fr;
+        grid-row-gap: 25px;
+        max-width: 600px;
+      }
+
+      .break {
+        display: none;
+      }
+
+      #cookie-cam {
+        padding-top: 100px;
+      }
+      
+      #video {
+        width: 560px;
+        height: 315px;
+      }
+
+      #order-now {
+        display: grid;
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 20px;
+        grid-template-areas:
+          "one two three"
+          "one two three";
+        height: 100vh;
+        padding-top: 100px;
+        justify-items: center;
+      }
+
+      #one-level {
+        grid-row: 1/2;
+        grid-column: 1/2;
+
+      }
+
+      #one-plan {
+        grid-row: 2/3;
+        grid-column: 1/2;
+
+      }
+
+      #three-level {
+        grid-row: 1/2;
+        grid-column: 2/3;
+      }
+
+      #three-plan {
+        grid-row: 2/3;
+        grid-column: 2/3;
+      }
+
+      #six-level {
+        grid-row: 1/2;
+        grid-column: 3/4;
+      }
+
+      #six-plan {
+        grid-row: 2/3;
+        grid-column: 3/4;
+      }
+
+    }
+    @media screen and (min-width: 480px) and (max-width: 650px) {
+      h1 {
+        font-family: 'Righteous', cursive;
+        color: white;
+        font-size: 4vw;
+      }
+
+      nav {
+        font-size: 2.5vw;
+      }
+      
+      #order-now {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 550px;
+        padding-bottom: 500px;
+      }
+    }
+    
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div id="logo">
+      <img src="https://cdn0.iconfinder.com/data/icons/kitchen-utensil-set/128/Cloche_food_kitchen_restaurant_icon-512.png" alt="cloche icon" id="header-img">
+      <h1>Cookie Cloche</h1>
+    </div>
+    <nav id="nav-bar">
+      <ul>
+        <li>
+          <a href="#how-it-works" class="nav-link">How it Works</a>
+        </li>
+        <li>
+          <a href="#cookie-cam" class="nav-link">Cookie Cam</a>
+        </li>
+        <li>
+          <a href="#order-now" class="nav-link">Order Now</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="form-div">
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <h2>Craveable cookies crafted for you...</h2>
+      <input type="email" name="email" id="email" placeholder="Enter your email address">
+      <input id="submit" type="submit" value="Get Started">
+    </form>
+  </section>
+
+  <section id="how-it-works">
+    <img src="https://www.pinclipart.com/picdir/big/62-620280_wisk-mixer-svg-png-mixing-bowl-clipart-black.png" alt="mixing bowl icon" class="works-img" id="custom-img">
+    <p id="custom-text"><b>Completely Customizable</b><br class="break"> Your cookies made your way: choose your own dough, mix-ins, and toppings, and we'll make the cookie of your dreams!</p>
+    <img src="https://image.flaticon.com/icons/png/512/45/45880.png" alt="delivery truck icon" class="works-img" id="delivery-img">
+    <p id="delivery-text"><b>Doorstep Delivery</b><br class="break"> Your custom cache of cookies will arrive to your door at the start of every month. No effort required!</p>
+    <img src="https://image.flaticon.com/icons/png/512/216/216341.png" alt="cookie icon" class="works-img" id="plans-img">
+    <p id="plans-text"><b>Personalized Plans</b><br class="break"> Choose from 1, 3, and 6 month plans to fulfill your cookie cravings, or give a box as a gift for a sweet-tooth celebration.</p>
+  </section>
+
+  <section id="cookie-cam">
+    <iframe id="video" src="https://www.youtube.com/embed/YpvM7YKJja4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </section>
+
+  <section id="order-now">
+    <div class="level" id="one-level">1 Month</div>
+    <div class="plan-info" id="one-plan">
+      <h3>$24.99</h3>
+      <ol>
+        <li>Perfect for trying us out--don't like it? No need to resubscribe!</li>
+        <li>Order will be delivered at the start of the month after when the order is placed.</li>
+      </ol>
+      <button class="button">Order Now</button>
+    </div>
+    <div class="level" id="three-level">3 Months</div>
+    <div class="plan-info" id="three-plan">
+      <h3>$59.99</h3>
+      <ol id="three-list">
+        <li>3 months of yummy cookies!</li>
+        <li>Make changes to your order any time, or sit back and let the cookies come to you.</li>
+      </ol>
+      <button class="button">Order Now</button>
+    </div>
+    <div class="level" id="six-level">6 Months</div>
+    <div class="plan-info" id="six-plan">
+      <h3>$99.99</h3>
+      <ol id="six-list">
+        <li>Our best value!</li>
+        <li>All six month cookie orders come with a special Cookie Cloche glass, perfect for milk.</li>
+      </ol>
+      <button class="button">Order Now</button>
+    </div>
+  </section>
+
+  <footer>
+    <ul id="footer-links">
+      <li class="footer-link">About Us</li>
+      <li class="footer-link">Privacy</li>
+      <li class="footer-link">Terms</li>
+    </ul>
+  </footer>
+</body>
+
+</html>
