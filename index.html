@@ -16,6 +16,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <style>
+   
     * {
       margin: 0;
       padding: 0;
@@ -170,6 +171,11 @@
 
 
     @media screen and (max-width: 480px) {
+      
+      html {
+        scroll-padding-top: 150px;
+      }
+      
       header {
         background-color: rgb(255, 126, 38);
         display: flex;
@@ -193,12 +199,6 @@
         margin-bottom: 150px !important;
       }
       
-      :target::before {
-        content: "";
-        display: block;
-        height: 150px;
-        margin: -150px 0 0;
-      }
 
       ul {
         display: flex;
@@ -260,6 +260,11 @@
 
     
     @media screen and (min-width: 480px) {
+      
+      html {
+        scroll-padding-top: 15vh;
+      }
+      
       header {
         background-color: rgb(255, 126, 38);
         display: flex;
@@ -281,12 +286,7 @@
       section {
         margin-bottom: 50px !important;
       }
-      
-      :target::before {
-        content: "";
-        display: block;
-        height: 15vh;
-        margin: -15vh 0 0;
+    
 
       ul {
         margin: auto;
