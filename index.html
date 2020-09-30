@@ -185,12 +185,19 @@
         width: 100vw;
         min-height: 100vh;
         margin: 0;
+        margin-top: 200px;
         padding: 0;
       }
       
       section {
         margin-bottom: 150px !important;
-        
+      }
+      
+      :target::before {
+        content: "";
+        display: block;
+        height: 150px;
+        margin: -150px 0 0;
       }
 
       ul {
@@ -203,8 +210,6 @@
 
       #form-div {
         margin: auto;
-        position: relative;
-        top: 200px;
       }
 
       #form {
@@ -221,8 +226,6 @@
 
       #how-it-works {
         margin: auto;
-        position: relative;
-        top: 200px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
@@ -243,15 +246,9 @@
         width: 320px;
         height: 180px;
       }
-      
-      #cookie-cam {
-        position: relative;
-        top: 200px;
-      }
+     
 
       #order-now {
-        position: relative;
-        top: 200px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
@@ -284,6 +281,12 @@
       section {
         margin-bottom: 50px !important;
       }
+      
+      :target::before {
+        content: "";
+        display: block;
+        height: 15vh;
+        margin: -15vh 0 0;
 
       ul {
         margin: auto;
@@ -293,13 +296,8 @@
         align-items: center;
         list-style-type: none;
         width: 20em;
-      }
-      
-      #form-div {
-        position: relative;
-        top: 16vh;
-      }
-
+        }
+        
       #form {
         display: flex;
         flex-flow: column nowrap;
@@ -313,8 +311,6 @@
       }
 
       #how-it-works {
-        position: relative;
-        top: 16vh;
         display: grid;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: 50px 1fr;
@@ -330,15 +326,8 @@
         width: 560px;
         height: 315px;
       }
-      
-      #cookie-cam {
-        position: relative;
-        top: 16vh;
-      }
 
       #order-now {
-        position: relative;
-        top: 16vh;
         display: grid;
         grid-template-rows: 50px 1fr;
         grid-template-columns: repeat(3, auto);
